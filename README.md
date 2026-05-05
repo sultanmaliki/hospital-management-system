@@ -413,26 +413,26 @@ CREATE TABLE appointment (
                          │
           ┌──────────────┼──────────────┐
           │              │              │
-┌─────────▼────────┐ ┌──▼──────────┐ ┌─▼────────────────┐
-│ PatientDAOImpl    │ │ DoctorDAOImpl│ │AppointmentDAOImpl│
+┌─────────▼────────┐ ┌───▼──────────┐ ┌─▼────────────────┐
+│ PatientDAOImpl   │ │ DoctorDAOImpl│ │AppointmentDAOImpl│
 │ (Patient CRUD)   │ │ (Doctor CRUD)│ │(Appointment CRUD)│
-└────────┬────────┘ └──┬──────────┘ └─┬────────────────┘
-         │             │              │
-         └─────────────┼──────────────┘
-                       │
-              ┌────────▼────────┐
-              │ ConfigLoader    │  (Environment Vars / Properties)
-              └────────┬────────┘
-                       │
-              ┌────────▼────────┐
-              │ DBConnection    │
-              │ (JDBC Provider) │
-              └────────┬────────┘
-                       │
-              ┌────────▼────────┐
-              │ MySQL Database  │
-              │ (hospital DB)   │
-              └─────────────────┘
+└────────┬─────────┘ └───┬──────────┘ └─┬────────────────┘
+         │               │              │
+         └───────────────┼──────────────┘
+                         │
+                ┌────────▼────────┐
+                │ ConfigLoader    │  (Environment Vars / Properties)
+                └────────┬────────┘
+                         │
+                ┌────────▼────────┐
+                │ DBConnection    │
+                │ (JDBC Provider) │
+                └────────┬────────┘
+                         │
+                ┌────────▼────────┐
+                │ MySQL Database  │
+                │ (hospital DB)   │
+                └─────────────────┘
 ```
 
 **Flow**:
