@@ -1,0 +1,48 @@
+# Git ignore file for Hospital Management System
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Build and compilation
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+build/
+dist/
+
+# Maven
+.m2/
+dependency-reduced-pom.xml
+pom.xml.tag
+pom.xml.asc
+release.properties
+
+# Configuration files with secrets (never commit)
+application.properties
+config.properties
+*.env
+.env
+
+# Logs
+logs/
+*.log
+
+# IDE specific
+*.iml
+.classpath
+.project
+.settings/
+bin/
+
+# Node (if using Node.js in future)
+node_modules/
+npm-debug.log
